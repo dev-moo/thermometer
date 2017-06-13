@@ -1,0 +1,9 @@
+
+
+[server]
+logfile=server.txt
+server_ip=localhost
+server_port=12345
+
+[thermometer]
+probe=/sys/bus/w1/devices/28-000007672892/w1_slave
