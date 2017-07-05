@@ -34,10 +34,3 @@ class Thermometer(object):
     def set_probe_file(self, temp_location):
         """Set file location of temp probe data"""
         self.probe_file = temp_location
-
-
-if __name__ == "__main__":
-
-    THERMO = Thermometer('/sys/bus/w1/devices/28-000007662891/w1_slave')
-
-    print THERMO.get_temperature()
