@@ -7,6 +7,9 @@ import SocketServer
 import json
 import sys
 import time
+from time import sleep
+
+sleep(60)
 
 THIS_DIR = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, THIS_DIR)

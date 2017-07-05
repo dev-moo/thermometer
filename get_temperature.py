@@ -3,6 +3,9 @@
 """Return reading from temperature probe"""
 
 import re
+import os
+from time import sleep
+
 
 class Thermometer(object):
 
@@ -10,6 +13,9 @@ class Thermometer(object):
 
     def __init__(self, temp_location):
         self.probe_file = temp_location
+
+        while not os.path.isfile(self.probe_file):
+            sleep(5)
 
     def get_temperature(self):
 
@@ -32,6 +38,6 @@ class Thermometer(object):
 
 if __name__ == "__main__":
 
-    THERMO = Thermometer('/sys/bus/w1/devices/28-000007612892/w1_slave')
+    THERMO = Thermometer('/sys/bus/w1/devices/28-000007662891/w1_slave')
 
     print THERMO.get_temperature()
